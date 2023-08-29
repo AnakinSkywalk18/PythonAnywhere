@@ -1,0 +1,47 @@
+{"intents": [
+    {
+        "tag": "greetings",
+        "patterns": ["Hello","Hey","Hi", "What's up?"],
+        "responses": ["Hello!", "How can I help you?"],
+        "follow_up_questions": []
+    },
+    {
+        "tag": "name",
+        "patterns": ["What's your name?", "What should I call you?", "name?", "what are you", "who are you?"],
+        "responses": ["I'm Cal, the AI Assistant for CalendarHome!"],
+        "follow_up_questions": []
+    },
+    {
+        "tag": "help",
+        "patterns": ["Help me", "help", "what can you do?", "helppp"],
+        "responses": ["I'm Cal! I can assist you with creating events. Type create event to get started!"],
+        "follow_up_questions": []
+    },
+    {
+        "tag": "help_log_in",
+        "patterns": ["log in", "'log in'", "login", "'login'"],
+        "responses": ["I will now assist you with logging in!"],
+        "follow_up_questions": [
+            "What is your email?",
+            "What is your password?"
+        ]
+    },
+    {
+        "tag": "create_event",
+        "patterns": ["Create Event", "Add event to calendar", "Add event", "Make new event", "new event please", "create new event", "add to calendar", "Schedule Event", "Plan Event"],
+        "responses": ["Sure, let's create an event!"],
+        "follow_up_questions": [
+            "What do you want your Event Title to be?",
+            "What is the Date for this Event?",
+            "What is the start time for this event? Include AM/PM",
+            "What is the end time for this event? Include AM/PM",
+            "You can customize your event more in a few seconds..."
+        ]
+    },
+    {
+        "tag": "goodbyes",
+        "patterns": ["Gotta go", "I have to leave now","Leave","Bye", "Nice chatting with you", "Thank you for helping me today", "Goodbye", "Have a great day!"],
+        "responses": ["My pleasure", "Bye!", "Have a great day!"],
+        "follow_up_questions": []
+    }
+]}

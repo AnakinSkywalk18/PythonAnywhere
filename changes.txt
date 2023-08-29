@@ -1,0 +1,2 @@
+Updated intents.json -- Included login as an acceptable input on home page
+Updated auth.py file

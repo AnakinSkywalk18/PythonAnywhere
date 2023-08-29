@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %} Log In Page {% endblock %}
+
+{% block content %}
+    <form method="POST">
+        <h3 align="center"> Log In </h3>
+        <div class="form-group">
+            <label for="email"> Email Address </label>
+            <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                name="email" 
+                placeholder="Enter Email"
+            />
+        </div>
+        <div class="form-group">
+            <label for="password"> Password </label>
+            <input 
+                type="password" 
+                class="form-control" 
+                id="password" 
+                name="password" 
+                placeholder="Enter Password"
+            />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary" name="button_action" value="login"  id="login"> Login </button>
+        <button type="submit" class="btn btn-primary" name="button_action" value="signup" id="signup"> Sign Up </button>
+    </form>
+
+
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="../static/ai.png" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Chat Support</h4>
+                        <p class="chatbox__description--header">Welcome to Calendar Home!</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+                <div class="chatbox__toggle-voice">
+                    <button id="toggle-voice-btn">Toggle Voice Activation</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="https://raw.githubusercontent.com/patrickloeber/chatbot-deployment/main/standalone-frontend/images/chatbox-icon.svg" /></button>
+            </div>
+        </div>
+    </div>        
+    <link rel="stylesheet" href="{{ url_for('static', filename='home_page.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='home_page.js') }}"></script>
+{% endblock %}
